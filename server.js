@@ -68,6 +68,11 @@ You can type ${prefix}help to get bot commands list`)
     const file = client.commands.get(cmd) || client.aliases.get(cmd)
     if(!file) return msg.reply("Perintah yang Anda inginkan tidak ada.")
     
+    client.on('guildMemberAdd', member => {
+      const autoRole = message.guild.roles.get('779698475939528754');
+      const AutoRole = message.guild.roles.find(role => role.name)
+    })
+    
     const now = Date.now()
    if (db.has(`cooldown_${msg.author.id}`)) {
 	const expirationTime = db.get(`cooldown_${msg.author.id}`) + 3000;
