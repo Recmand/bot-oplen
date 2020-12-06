@@ -41,6 +41,8 @@ commandFile.forEach(file => {
   console.log(`Loaded command ${command.name} with alias(es) => ${command.alias}`)
   })
 
+    
+
 client.on('message', msg => {
   if(msg.author.bot) return;
   if(!msg.guild) return;
@@ -67,11 +69,6 @@ You can type ${prefix}help to get bot commands list`)
   try {
     const file = client.commands.get(cmd) || client.aliases.get(cmd)
     if(!file) return msg.reply("Perintah yang Anda inginkan tidak ada.")
-    
-    client.on('guildMemberAdd', member => {
-      const autoRole = message.guild.roles.get('779698475939528754');
-      const AutoRole = message.guild.roles.find(role => role.name)
-    })
     
     const now = Date.now()
    if (db.has(`cooldown_${msg.author.id}`)) {
