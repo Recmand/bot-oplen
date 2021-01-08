@@ -5,7 +5,7 @@ module.exports = {
 run: async(client, message, args) => {
     client.guilds.cache.forEach((guild) => {
       message.channel.send(
-        `${guild.name} | ${guild.memberCount} Members | Server ID: ${guild.id}`
+        `${guild.name} | ${guild.memberCount} Members | ${guild.id} Server ID`
       )
     })
   }}
