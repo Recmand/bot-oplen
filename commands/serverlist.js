@@ -1,5 +1,8 @@
 module.exports = {
-  name: "serverli",
-  alias: ["say", "sy"],
-  description: "to say message",
-run: async
+  name: "serverlist",
+  alias: ["list server", "sl"],
+  description: "total server",
+run: async (client, 'server', (message) => {
+           client.guilds.cache.forEach((guilds) => { 
+             message.channel.send(
+             `${guild.name} ha
